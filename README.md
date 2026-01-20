@@ -23,26 +23,26 @@ Built for serious breeders. No spreadsheets. No guessing.
 
 ```mermaid
 flowchart TB
-  subgraph Client[Client]
-    U[Player / Breeder] --> FE[Web App (Next.js)]
+  subgraph Client
+    U["Player and Breeder"] --> FE["Web App NextJS"]
   end
 
-  subgraph Backend[Backend]
-    BE[API Server]
-    AUTH[Auth]
-    CALC[Breeding Engine]
-    SYNC[Import / Sync Service]
+  subgraph Backend
+    BE["API Server"]
+    AUTH["Authentication"]
+    CALC["Breeding Engine"]
+    SYNC["Import Sync Service"]
   end
 
-  subgraph Data[Data Layer]
-    DB[(Postgres)]
-    CACHE[(Redis)]
+  subgraph Data
+    DB[("Postgres")]
+    CACHE[("Redis")]
   end
 
-  subgraph ArkServer[ARK Dedicated Server]
-    GS[Game Server]
-    PLUG[Plugin / Export]
-    SAVE[(Save Files)]
+  subgraph ArkServer
+    GS["ARK Dedicated Server"]
+    PLUG["Server Plugin"]
+    SAVE[("Save Files")]
   end
 
   FE --> BE
