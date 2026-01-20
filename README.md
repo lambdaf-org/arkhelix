@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧬 ArkHelix
+> A web-based breeding & mutation manager for **ARK: Survival Ascended**
 
-## Getting Started
+ArkHelix is a full-stack web application designed to help breeders **track tames, mutations, lineages, and breeding plans** — with optional **automatic import from a dedicated ARK server**.
 
-First, run the development server:
+Built for serious breeders. No spreadsheets. No guessing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📊 Track all tamed creatures (stats, mutations, lineage)
+- 🧬 Automatic mutation & breeding calculations
+- 🧠 Best-pair recommendations for target stats
+- 🔄 Auto-import from ARK dedicated servers (plugin or save parsing)
+- 📁 Tribe-based organization
+- 📤 Export breeding plans (PDF / CSV)
+- ⚡ Fast recalculations with caching
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🏗 Architecture Overview
 
-To learn more about Next.js, take a look at the following resources:
+```mermaid
+flowchart TB
+  subgraph Client[Client]
+    U[Player / Breeder] --> FE[Web App (Next.js)]
+  end
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  subgraph Backend[Backend]
+    BE[API Server]
+    AUTH[Auth]
+    CALC[Breeding Engine]
+    SYNC[Import / Sync Service]
+  end
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  subgraph Data[Data Layer]
+    DB[(Postgres)]
+    CACHE[(Redis)]
+  end
 
-## Deploy on Vercel
+  subgraph ArkServer[ARK Dedicated Server]
+    GS[Game Server]
+    PLUG[Plugin / Export]
+    SAVE[(Save Files)]
+  end
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  FE --> BE
+  BE --> AUTH
+  BE --> CALC
+  BE --> DB
+  BE --> CACHE
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  GS --> PLUG --> SYNC
+  SAVE --> SYNC
+  SYNC --> DB
+  SYNC --> CACHE
