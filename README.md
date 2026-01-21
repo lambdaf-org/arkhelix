@@ -55,4 +55,37 @@ flowchart TB
   SAVE --> SYNC
   SYNC --> DB
   SYNC --> CACHE
+
 ```
+
+## 🧰 Tech Stack
+
+Built with modern, boring-in-a-good-way tech that scales and doesn’t fight you.
+
+### Frontend
+- **Next.js** – React framework for production  
+  https://nextjs.org
+- **TypeScript** – Type-safe sanity  
+  https://www.typescriptlang.org
+- **Tailwind CSS** – Utility-first styling  
+  https://tailwindcss.com
+
+### Backend
+- **Fastify** – Fast, low-overhead Node.js framework  
+  https://fastify.dev
+- **Node.js** – JavaScript runtime  
+  https://nodejs.org
+- **Zod** – Runtime schema validation  
+  https://zod.dev
+
+### Data & Caching
+- **PostgreSQL** – Relational database  
+  https://www.postgresql.org
+- **Redis** – In-memory cache & queueing  
+  https://redis.io
+
+### Infrastructure & Tooling
+- **Docker** – Containerization  
+  https://www.docker.com
+- **Mermaid** – Architecture & flow diagrams  
+  https://mermaid.js.org
