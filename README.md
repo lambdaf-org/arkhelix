@@ -89,3 +89,12 @@ Built with modern, boring-in-a-good-way tech that scales and doesn’t fight you
   https://www.docker.com
 - **Mermaid** – Architecture & flow diagrams  
   https://mermaid.js.org
+
+## 🧪 Quick Breeding Explained
+
+For anyone who doesn’t want a wall of text — this is the **standard ARK mutation breeding loop**, visualized.
+
+> Clean females + one male → check baby → keep only useful mutations → replace → repeat until cracked.
+
+![ARK Mutation Breeding Flowchart](https://github.com/Thirstums/arkhelix/blob/master/comprehensive-ark-breeding-masterclass-v0-hv9pld0sxb6c1.png)
+
