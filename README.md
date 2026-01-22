@@ -1,7 +1,7 @@
 # 🧬 ArkHelix
 > A web-based breeding & mutation manager for **ARK: Survival Ascended**
 
-ArkHelix is a full-stack web application designed to help breeders **track tames, mutations, lineages, and breeding plans** — with optional **automatic import from a dedicated ARK server**.
+ArkHelix is a full-stack web application designed to help breeders **track tames, mutations, lineages, and breeding plans** — with optional **automatic LIVE import from a dedicated ARK server via mod**.
 
 Built for serious breeders. No spreadsheets. No guessing.
 
@@ -93,6 +93,7 @@ For anyone who doesn’t want a wall of text — this is the **standard ARK muta
 > Clean females + one male → check baby → keep only useful mutations → replace → repeat until cracked.
 
 ![ARK Mutation Breeding Flowchart](https://github.com/Thirstums/arkhelix/blob/master/comprehensive-ark-breeding-masterclass-v0-hv9pld0sxb6c1.png)
+
 
 
 
