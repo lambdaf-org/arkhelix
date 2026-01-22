@@ -72,7 +72,7 @@ Built with modern, boring-in-a-good-way tech that scales and doesn’t fight you
 
 ### Backend
 - **Django** – Batteries-included Python backend framework
-https://www.djangoproject.com
+ https://www.djangoproject.com
 
 ### Data & Caching
 - **PostgreSQL** – Relational database  
@@ -93,5 +93,6 @@ For anyone who doesn’t want a wall of text — this is the **standard ARK muta
 > Clean females + one male → check baby → keep only useful mutations → replace → repeat until cracked.
 
 ![ARK Mutation Breeding Flowchart](https://github.com/Thirstums/arkhelix/blob/master/comprehensive-ark-breeding-masterclass-v0-hv9pld0sxb6c1.png)
+
 
 
